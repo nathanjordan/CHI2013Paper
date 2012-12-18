@@ -65,8 +65,7 @@
 \usepackage{graphicx}   % for EPS use the graphics package instead
 \usepackage{balance}    % useful for balancing the last columns
 \usepackage{bibspacing} % save vertical space in references
-
-
+%\usepackage{natbib}
 
 \begin{document}
 
@@ -89,22 +88,24 @@ Traditional 3D painting software has relied on building a two-dimensional repres
 % =============================================================================
 \section{Introduction}
 % =============================================================================
-This format is to be used for submissions that are published in the conference extended abstracts.  
-We wish to give this volume a consistent, high-quality appearance. 
-We therefore ask that authors follow some simple guidelines. 
-In essence, you should format your paper exactly like this document. 
-The easiest way to do this is simply to download a template from the conference website and replace the content with your own material.
 
+Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum. Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
+
+Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum. Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
+
+\pagebreak
 
 \begin{figure}
-\hspace*{-0.4\columnwidth}% displace figure
-\parbox{1.4\columnwidth}{
+%\hspace*{-0.4\columnwidth}% displace figure
+\parbox{\columnwidth}{
   \centering
-  \includegraphics[width=\columnwidth]{sample.jpg}
-  \caption{Insert a caption below each figure. Images can "float" around body text, like this example.}
-  \label{fig:sample}
+  \includegraphics[width=0.8\columnwidth]{onex.jpg}
+  \caption{The main interface the user is presented with}
+  \label{fig:maininterface}
 }
-\end{figure}%
+\end{figure}
+
+\pagebreak
 
 % =============================================================================
 \section{Copyright}
@@ -112,124 +113,79 @@ The easiest way to do this is simply to download a template from the conference 
 Copyright (c) 2012, University of Nevada, Reno Department of Computer Science.
 All rights reserved.
 
+\section{Intended Users \& Usability Goals}
 
-% =============================================================================
-%\section{Text formatting}
-% =============================================================================
-%Please use an 8.5-point Verdana font, or other sans serifs font as close as possible in appearance to Verdana in which these guidelines have been set. 
-%Arial 9-point font is a reasonable substitute for Verdana as it has a similar x-height. 
-%Please use serif or non-proportional fonts only for special purposes, such as distinguishing source code text.
-%Additionally, here is an example of footnoted text.\footnote{Use footnotes sparingly, if at all.}
-%As stated in the footnote, footnotes should rarely be used.
+PaintMobile3D is an end-user product that will largely be used for the users enjoyment. The application is currently built exclusively for the Android platform, as such the intended users of the application will be Android smartphone users with a device running Android 2.3.x (Gingerbread) or newer. The application currently does not have a specific problem domain outside of entertainment, and as such can be used by any user without any prior training. PaintMobile3D requires no configuration for most users, minimal user interface elements (two options on the ActionBar), and a simple command structure (hold screen to draw, release to stop drawing). Consequently, PaintMobile3D is a very simple and easy to use application. Our main goals when creating PaintMobile3D are the following:
 
-%\subsection{Language, style, and content}
-% -----------------------------------------------------------------------------
-%The written and spoken language of SIGCHI is English. 
-%Spelling and punctuation may use any dialect of English (e.g., British, Canadian, US, etc.) provided this is done consistently. 
-%Hyphenation is optional. 
-%To ensure suitability for an international audience, please pay attention to the following:
+\begin{itemize}
+\item
+Create a unique drawing tool for the Android platform
+\item
+Combine the accelerometer, gyroscope and camera data
+\item
+Allow the user to draw by moving their phone through space
+\end{itemize}
 
-%\begin{itemize}\compresslist
-%\item 	
-%Write in a straightforward style. 
-%Use simple sentence structure. 
-%Try to avoid long sentences and complex sentence structures. 
-%Use semicolons carefully.
-%\item 	
-%Use common and basic vocabulary (e.g., use the word ``unusual" rather than the word ``arcane").
-%\item 	
-%Briefly define or explain all technical terms. 
-%The terminology common to your practice/discipline may be different in other design practices/disciplines.
-%\item 	
-%Spell out all acronyms the first time they are used in your text. 
-%For example, ``World Wide Web (WWW)".
-%\item 	
-%Explain local references (e.g., not everyone knows all city names in a particular country).
-%\item 	
-%Explain ``insider" comments. 
-%Ensure that your whole audience understands any reference whose meaning you do not describe (e.g., do not assume that everyone has used a Macintosh or a particular application).
-%\item 	
-%Explain colloquial language and puns. 
-%Understanding phrases like ``red herring" requires a cultural knowledge of English. 
-%Humor and irony are difficult to translate.
-%\item 	
-%Use unambiguous forms for culturally localized concepts, such as times, dates, currencies and numbers (e.g., ``1-5-97" or ``5/1/97" may mean 5 January or 1 May, and ``seven o'clock" may mean 7:00 am or 19:00).
-%\item 	
-%Be careful with the use of gender-specific pronouns (he, she) and other gender-specific words (chairman, manpower, man-months). 
-%Use inclusive language (e.g., she or he, they, chair, staff, staff-hours, person-years) that is gender-neutral. 
-%If necessary, you may be able to use ``he" and ``she" in alternating sentences, so that the two genders occur equally often~\cite{Schwartz95}. 
-%\end{itemize}
+\section{Main Functionality}
 
+The core functionality of PaintMobile3D revolves around the ability to paint in three-dimensional space. This functionality is provided by combining the sensor data of the camera of the device as well as the accelerometer and gyroscope (if available), which are combined using an algorithm to provide device localization (the location of the phone in a three-dimensional space). We use these measurements to create points in a virtual coordinate system that can then be used to draw points, lines, or other geometric shapes. Once the user has drawn his or her object in the virtual 3D environment, they are free view the drawing from different angles and perspectives by orbiting, panning, or zooming the drawing. These operations are performed by making intuitive gestures on the screen of the device, such as a swipe to orbit or pinch to zoom.
 
-% =============================================================================
-\section{Figures}
-% =============================================================================
-The examples on this and following pages should help you get a feel for how screen-shots and other figures should be placed in the template. 
-Be sure to make images large enough so the important details are legible and clear.
+\section{Related Systems \& Novelty}
 
-Your document may use color figures, which are included in the page limit; the figures must be usable when printed in black and white.
-You can use the \LaTeX's \texttt{marginpar} command to insert figures in the (right) margin side of the document (see \autoref{fig:marginparsample}).
+At the time of writing, there are no competing or related systems for drawing in 3D space using a smartphone. Similar systems exist using camera-based tracking algorithms to track hand or object movement from a fixed point away from the user. One such solution takes advantage of the Microsoft Kinect stereoscopic camera to measure the movement of the user’s hand and deduce 3D measurements from it to create a single line segment. Another solution involves instrumentation attached to the users hand that tracks their movements and allows them to create strokes in 3D space. Although these systems allow for tracking an object in 3D space, they do so using systems that are unavailable on most smartphones, or do not provide flexibility in regards to location or portability. PaintMobile3D uses the limited sensory data provided by a modern smartphone to perform these operations in a multitude of environments and conditions. The application also provides features like sharing and social network integration that are unavailable on these related systems. Given the growing ubiquity of smartphones and social media outlets like Facebook, Twitter, and Instagram, PaintMobile3D could create a new class of social interaction with 3D art. \cite{brooks1997determining} \cite{schkolne2002drawing} \cite{voigt2011robust} \cite{hol2007robust}
 
-As shown in \autoref{fig:sample}, the width of figures can be bigger than the width of text columns.
-\autoref{fig:bigsample} is an example of how much space can be reserved for images.
-
-
-% =============================================================================
-\section{References and Citations}
-% =============================================================================
-Use a numbered list of references at the end of the article, ordered alphabetically by first author, and referenced by numbers in brackets \cite{Anderson92,Klemmer02,Mather00,Zellweger01}
-For papers from conference proceedings, include the title of the paper and an abbreviated name of the conference (e.g., for Interact 2003 proceedings, use Proc. Interact 2003). 
-Do not include the location of the conference or the exact date; do include the page numbers if available. 
-See the examples of citations at the end of this document. 
-
-Your references should be published materials accessible to the public.  
-Internal technical reports may be cited only if they are easily accessible (i.e., you provide the address for obtaining the report within your citation) and may be obtained by any reader for a nominal fee.  
-Proprietary information may not be cited. 
-Private communications should be acknowledged in the main text, not referenced  (e.g., [Robertson, personal communication]).
-
-
-\clearpage
-\marginpar{
-You may want to place some marginal notes in this page to display more information.
-\\[0.5\textheight]
-Note that marginal notes must appear in the (left) outer margin, due to the template design.
-}
 \begin{figure}
-\hspace*{-0.5\textwidth}% displace figure
-\parbox{\textwidth}{
-  \begin{center}
-  \frame{\includegraphics[width=\textwidth]{sample.jpg}}
-  \caption{A big figure. You may want to place some marginal notes in this page, as shown above. Notice also that this image resolution is quite low, as it is just an example of formatting.}
-  \label{fig:bigsample}
-  \end{center}  
+%\hspace*{-0.4\columnwidth}% displace figure
+\parbox{\columnwidth}{
+  \centering
+  \includegraphics[width=\columnwidth]{icon.jpg}
+  \caption{The program is launched via the main Android launcher or a homescreen shortcut}
+  \label{fig:icon}
 }
 \end{figure}
 
-
-% =============================================================================
-\section{Producing and testing PDF files}
-% =============================================================================
-\marginpar{
 \begin{figure}
-  \begin{center}
-  \includegraphics[width=\marginparwidth]{sample.jpg}
-  \caption{A marginal figure.}
-  \label{fig:marginparsample}
-  \end{center}  
-\end{figure}
+\hspace{\columnwidth}% displace figure
+\parbox{\columnwidth}{
+  \centering
+  \includegraphics[width=\columnwidth]{colorpicker.jpg}
+  \caption{When the user selects the eyedropper option in the Action Bar, the user is presented with a popup interface to select a color they wish to draw with.}
+  \label{fig:colorpicker}
 }
-We recommend that you produce a PDF version of your submission well before the final deadline. 
-Besides making sure that you are able to produce a PDF, you will need to check that (a) the length of the file remains within the submission category's page limit, (b) the PDF file size is 4 megabytes or less, and (c) the file can be read and printed using Adobe Acrobat Reader. 
-Test your PDF file by viewing or printing it with the same software we will use when we receive it, Adobe Acrobat Reader Version 7. 
-This is widely available at no cost from~\cite{Acrobat7}.  
-Note that most reviewers will use a North American/European version of Acrobat reader, which cannot handle documents containing non-North American or non-European fonts (e.g. Asian fonts).  
-Please therefore do not use Asian fonts, and verify this by testing with a North American/European Acrobat reader (obtainable as above). Something as minor as including a space or punctuation character in a two-byte font can render a file unreadable.
+\end{figure}
+
+%\begin{figure}
+%\hspace*{-0.4\columnwidth}% displace figure
+%\parbox{1.4\columnwidth}{
+%  \centering
+%  \includegraphics[width=1.4\columnwidth]{sample.jpg}
+%  \caption{Insert a caption below each figure. Images can "float" around body text, like this example.}
+%  \label{fig:sample}
+%}
+%\end{figure}
+
+\section{User Interface}
+
+Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum. Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum. Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
+
+Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum. Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
+
+
+\section{Technology \& Implementation}
+
+Since PaintMobile3D is an Android application, we naturally have made heavy use of the Android API. Sensor data is aquired using a publisher-subsciber system that is made available by the Android operating system. In order to draw the points onto the display for the user to see, we have made use of the OpenGL ES library that is also provided by the Android API. While the accelerometer and gyroscope provide directly applicable information straight from the sensor, the data from the camera requires additional manipulation in order to make it useful. For this, are using the OpenCV implementation for Android, called OpenCV4Android to provide with computer vision functionality such as feature extraction and motion tracking. After this data has been processed, it can then be used in our localization algorithms. Some of the calculations needed to perform localization for our application are computationally taxing. Since the application is designed to run on a mobile device that has limited battery power, we need to make these computations as efficient as possible. To do this, we are using the Android NDK (Native Development Kit) to provide us with direct access to the CPU via a C interface (as opposed to the Dalvic Virtual Machine used by Java components of the application).
+
+\section{Potential Applications}
+
+PaintMobile3D is an application that is designed simply for user entertainment. However the inner-workings of the application, coupled with the mobility and popularity of smartphones can be applied to more productive means as well.
 
 \section{Acknowledgements}
-We thank all DUX 2003 publications support and staff who wrote this document originally and allowed us to modify it for this conference.
-This template was based on Manas Tungare's \texttt{chi.cls}, and rewritten by Luis A. Leiva.
+
+Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum. Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
+
 
 \balance
+
 \bibliographystyle{acm-sigchi}
 \bibliography{references}
 
