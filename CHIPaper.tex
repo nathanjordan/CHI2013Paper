@@ -86,16 +86,16 @@ world. The user can pick from different colors and can make multiple
 
 \category{H.5.2}{Information interfaces and presentation (e.g., HCI)}{User
 Interfaces}. %See \cite{ACMCCS} %See:
-\url{http://www.acm.org/about/class/1998/} %\textcolor{red}{Mandatory section
-to be included in your final version.}
+%\url{http://www.acm.org/about/class/1998/} %\textcolor{red}{Mandatory section
+%to be included in your final version.}
 
 \terms{\plaingeneralterms}
 
 
 %
-=============================================================================
+%=============================================================================
 \section{Introduction} %
-=============================================================================
+%=============================================================================
 
 For some time, modeling 3D has been a difficult task due to the problems of
 the inherently 2D interaction model provided by computers. By adding a
@@ -177,18 +177,7 @@ tracking algorithms to track hand or object movement from a fixed point away
 from the user. One such solution takes advantage of the Microsoft Kinect
 stereoscopic camera to measure the movement of the user’s hand and deduce 3D
 measurements from it to create a single line segment. Another solution
-involves instrumentation attached to the users' hand that tracks their
-movements and allows them to create strokes in 3D space
-\cite{schkolne2002drawing}. Although these systems allow for tracking an
-object in 3D space, they do so using systems that are unavailable on most
-smartphones, or do not provide flexibility in regards to location or
-portability. PaintMobile3D uses the limited sensory data provided by a modern
-smartphone to perform these operations in a multitude of environments and
-conditions. The application also provides features like sharing and social
-network integration that are unavailable on these related systems. Given the
-growing ubiquity of smartphones and social media outlets like Facebook,
-Twitter, and Instagram, PaintMobile3D could create a new class of social
-interaction with 3D art.
+involves instrumentation 
 
 \begin{figure}
 %\hspace*{-0.4\columnwidth}% displace figure
@@ -200,23 +189,20 @@ interaction with 3D art.
 }
 \end{figure}
 
-\section{Related Systems \& Novelty}
+\pagebreak
 
-At the time of writing, there are no competing or related systems for drawing in 3D space using a smartphone. Similar systems exist using camera-based tracking algorithms to track hand or object movement from a fixed point away from the user. One such solution takes advantage of the Microsoft Kinect stereoscopic camera to measure the movement of the user’s hand and deduce 3D measurements from it to create a single line segment. Another solution involves instrumentation attached to the users hand that tracks their movements and allows them to create strokes in 3D space. 
-
-\begin{figure}
-\hspace{\columnwidth}% displace figure
-\parbox{\columnwidth}{
-  \centering
-  \includegraphics[width=\columnwidth]{colorpicker.jpg}
-  \caption{When the user selects the eyedropper option in the Action Bar, the user is presented with a popup interface to select a color they wish to draw with.}
-  \label{fig:colorpicker}
-}
-\end{figure}
-
-Although these systems allow for tracking an object in 3D space, they do so using systems that are unavailable on most smartphones, or do not provide flexibility in regards to location or portability. PaintMobile3D uses the limited sensory data provided by a modern smartphone to perform these operations in a multitude of environments and conditions. The application also provides features like sharing and social network integration that are unavailable on these related systems. Given the growing ubiquity of smartphones and social media outlets like Facebook, Twitter, and Instagram, PaintMobile3D could create a new class of social interaction with 3D art. \cite{brooks1997determining} \cite{schkolne2002drawing} \cite{voigt2011robust} \cite{hol2007robust}
-
-
+attached to the users' hand that tracks their
+movements and allows them to create strokes in 3D space\cite{schkolne2002drawing}. 
+Although these systems allow for tracking an
+object in 3D space, they do so using systems that are unavailable on most
+smartphones, or do not provide flexibility in regards to location or
+portability. PaintMobile3D uses the limited sensory data provided by a modern
+smartphone to perform these operations in a multitude of environments and
+conditions. The application also provides features like sharing and social
+network integration that are unavailable on these related systems. Given the
+growing ubiquity of smartphones and social media outlets like Facebook,
+Twitter, and Instagram, PaintMobile3D could create a new class of social
+interaction with 3D art.
 
 %\begin{figure}
 %\hspace*{-0.4\columnwidth}% displace figure
@@ -231,6 +217,16 @@ Although these systems allow for tracking an object in 3D space, they do so usin
 \section{User Interface}
 
 PaintMobile 3D is designed to conform to the Android design guidelines. While the application is compatible with Android 2.3.x (Gingerbread), its targeted version is Android 4.1.x (Ice Cream Sandwich). Thus the application follows the Ice Cream Sandwich design guidelines. The application currently has two main screens or "activities", the main screen and settings screen. The settings screen contains options to change which sensors are used in the localization algorithm, calibrating sensors, as well as information about the application and the developers. The main application interface includes an ActionBar (a standard Android design convention), which takes all the important functionality of the application and keeps it readily available for the user to access. In PaintMobile3D, these actions include accessing the settings page, changing the color of the drawing, and extra options such as sharing, loading, and saving the drawing. The bulk of the main interface is taken up by the drawing area. After the user draws the shape by moving the phone around. the drawing that is computed based on these motions is shown in this area. The user can pinch the screen to zoom in or out, and swipe the screen to orbit. We chose not to allow the user to translate, as they may get lost in the environment and would degrade user experience. 
+
+\begin{figure}
+\hspace{\columnwidth}% displace figure
+\parbox{\columnwidth}{
+  \centering
+  \includegraphics[width=\columnwidth]{colorpicker.jpg}
+  \caption{When the user selects the eyedropper option in the Action Bar, the user is presented with a popup interface to select a color they wish to draw with.}
+  \label{fig:colorpicker}
+}
+\end{figure}
 
 %There are two screens in the program; main screen and settings screen. When
 %the program opens, the user sees the main interface with which she can start
@@ -248,6 +244,8 @@ PaintMobile 3D is designed to conform to the Android design guidelines. While th
 %the GitHub repository page of the project. There also options to save the
 %current drawing, clear the screen, load another drawing, or share the current
 %drawing on social networks.
+
+\pagebreak
 
 \section{Technology \& Implementation}
 
@@ -275,7 +273,7 @@ PaintMobile3D is an application that is designed simply for user entertainment. 
 considerable value. For example, if the phone is connected to a computer with a project, it's possible to draw in front of an audience,
 allowing one to use PaintMobile3D as a virtual whiteboard. This could be improved further by allowing the importing of
 3D models, which could be annotated live. These could be used for any number of purposes, from teaching to planning military tactics.
-
+\\
 The motion tracking technology is valuable in itself for any number of tasks. Games are an obvious application. Using the phone as a
 portal into a virtual world could be done by changing the camera position with the phone's position. With some calibration, using a
 phone for measurement is possible by tracking the distance the phone travels.
@@ -283,18 +281,7 @@ phone for measurement is possible by tracking the distance the phone travels.
 
 \section{Acknowledgements}
 
-Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod
-tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam,
-quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo
-consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse
-cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non
-proident, sunt in culpa qui officia deserunt mollit anim id est laborum. Lorem
-ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor
-incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis
-nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.
-Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore
-eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt
-in culpa qui officia deserunt mollit anim id est laborum.
+We would like to thank...
 
 \balance
 
