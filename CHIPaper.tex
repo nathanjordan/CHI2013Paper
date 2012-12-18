@@ -178,14 +178,43 @@ At the time of writing, there are no competing or related systems for drawing in
 
 \section{User Interface}
 
-There are two screens in the program; main screen and settings screen. When the program opens the user see the main interface with which he/she can start drawing immediately simply tapping the screen. There is an action bar at the top of the screen with two buttons. The first button with the eyedropper icon enables user to select a color from the default ones or pick another color using the  color picker. User can also see the selected color at the bottom of the screen while in drawing mode. User can stop drawing anytime to look at the drawing and use swipe and pinch gestures to orbit or zoom in view mode.
+There are two screens in the program; main screen and settings screen. When
+the program opens, the user sees the main interface with which she can start
+drawing immediately by simply tapping the screen. There is an action bar at
+the top of the screen with two buttons. The first button, indicated by an
+eyedropper icon, enables the user to select a color from a default palette or
+pick another color using the color picker. Users can also see the selected
+color at the bottom of the screen while in drawing mode. They can stop drawing
+at any time and look at their drawing, using swipe and pinch gestures to orbit
+or zoom in view mode.
 
-Second button, the gearwheel, is a link to the settings page. In this page user can choose to enable/disable camera and gyroscope or calibrate accelerometer. User can also see developer info and a link to the GitHub repository page of the project. There also also options to save current drawing, clear screen, load another drawing or share current drawing on social networks.
+Second button, indicated by a gear, is a link to the settings page. In this
+page, users can choose to toggle the usage of the camera and gyroscope or
+calibrate the accelerometer. Users can also see developer info and a link to
+the GitHub repository page of the project. There also options to save the
+current drawing, clear the screen, load another drawing, or share the current
+drawing on social networks.
 
 
 \section{Technology \& Implementation}
 
-Since PaintMobile3D is an Android application, we naturally have made heavy use of the Android API. Sensor data is acquired using from callbacks that are made available by the Android operating system. In order to draw the points onto the display for the user to see, we have made use of the OpenGL ES library that is also provided by the Android API. While the accelerometer and gyroscope provide directly applicable information straight from the sensor, the data from the camera requires additional manipulation in order to make it useful. For this, we are using the OpenCV implementation for Android, called OpenCV4Android, to provide computer vision functionality, such as feature extraction and motion tracking. After this data has been processed, it can then be used by our localization algorithms. Some of the calculations needed to perform localization for our application are computationally taxing. Since the application is designed to run on a mobile device that has limited battery power, we need to make these computations as efficient as possible. To do this, we are using the Android NDK (Native Development Kit) to provide us with direct access to the CPU using native code, instead of the managed environment provided by Android's Dalvik Virtual Machine.
+Since PaintMobile3D is an Android application, we naturally have made heavy
+use of the Android API. Sensor data is acquired using from callbacks that are
+made available by the Android operating system. In order to draw the points
+onto the display for the user to see, we have made use of the OpenGL ES
+library that is also provided by the Android API. While the accelerometer and
+gyroscope provide directly applicable information straight from the sensor,
+the data from the camera requires additional manipulation in order to make it
+useful. For this, we are using the OpenCV implementation for Android, called
+OpenCV4Android, to provide computer vision functionality, such as feature
+extraction and motion tracking. After this data has been processed, it can
+then be used by our localization algorithms. Some of the calculations needed
+to perform localization for our application are computationally taxing. Since
+the application is designed to run on a mobile device that has limited battery
+power, we need to make these computations as efficient as possible. To do
+this, we are using the Android NDK (Native Development Kit) to provide us with
+direct access to the CPU using native code, instead of the managed environment
+provided by Android's Dalvik Virtual Machine.
 
 \section{Potential Applications}
 
