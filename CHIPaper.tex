@@ -99,7 +99,10 @@ to be refined with traditional 3D software.
 At its core, PaintMobile3D is about taking the motion of a phone and translating it into 3D coordinates, used to draw a model.
 This is done using the various sensors on modern smartphones: accelerometers, compasses, and cameras. Newer smartphones
 also add gyroscopes. Even with all of this data, it is difficult to keep track of the phone in realtime due to the noisiness of the signal.
-Hol, et al. \cite{hol2007robust} created the approach used in this software to maintain the phone's location.
+Various approaches were combined to create the algorithm used in this software to maintain the phone's location \cite{voigt2011robust} \cite{hol2007robust}.
+However, these approaches used a pre-calibrated camera. Due to the variation of cameras in phones, we needed to augment this with
+Brooks, et al.'s technique for determining egomotion (i.e. the motion of a camera in an environment) with an uncalibrated
+camera \cite{brooks1997determining}.
 
 \pagebreak
 
@@ -141,7 +144,7 @@ The core functionality of PaintMobile3D revolves around the ability to paint in 
 
 \section{Related Systems \& Novelty}
 
-At the time of writing, there are no competing or related systems for drawing in 3D space using a smartphone. Similar systems exist using camera-based tracking algorithms to track hand or object movement from a fixed point away from the user. One such solution takes advantage of the Microsoft Kinect stereoscopic camera to measure the movement of the user’s hand and deduce 3D measurements from it to create a single line segment. Another solution involves instrumentation attached to the users' hand that tracks their movements and allows them to create strokes in 3D space. Although these systems allow for tracking an object in 3D space, they do so using systems that are unavailable on most smartphones, or do not provide flexibility in regards to location or portability. PaintMobile3D uses the limited sensory data provided by a modern smartphone to perform these operations in a multitude of environments and conditions. The application also provides features like sharing and social network integration that are unavailable on these related systems. Given the growing ubiquity of smartphones and social media outlets like Facebook, Twitter, and Instagram, PaintMobile3D could create a new class of social interaction with 3D art. \cite{brooks1997determining} \cite{schkolne2002drawing} \cite{voigt2011robust} \cite{hol2007robust}
+At the time of writing, there are no competing or related systems for drawing in 3D space using a smartphone. Similar systems exist using camera-based tracking algorithms to track hand or object movement from a fixed point away from the user. One such solution takes advantage of the Microsoft Kinect stereoscopic camera to measure the movement of the user’s hand and deduce 3D measurements from it to create a single line segment. Another solution involves instrumentation attached to the users' hand that tracks their movements and allows them to create strokes in 3D space \cite{schkolne2002drawing}. Although these systems allow for tracking an object in 3D space, they do so using systems that are unavailable on most smartphones, or do not provide flexibility in regards to location or portability. PaintMobile3D uses the limited sensory data provided by a modern smartphone to perform these operations in a multitude of environments and conditions. The application also provides features like sharing and social network integration that are unavailable on these related systems. Given the growing ubiquity of smartphones and social media outlets like Facebook, Twitter, and Instagram, PaintMobile3D could create a new class of social interaction with 3D art.
 
 \begin{figure}
 %\hspace*{-0.4\columnwidth}% displace figure
