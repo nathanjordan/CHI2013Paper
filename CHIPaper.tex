@@ -21,17 +21,17 @@
 	\affaddr{1664 North Virginia Street  Reno, NV 89557 USA}\\
 	\email{njordan@cse.unr.edu}
   }\alignauthor{
-  	\textbf{Halim Ates}\\
+  	\textbf{Halim Cagri Ates}\\
   	\affaddr{University of Nevada, Reno}\\
   	\affaddr{1664 North Virginia Street  Reno, NV 89557 USA}\\
-  	\email{hcagri@gmail.com} } \\ \\ \\
+  	\email{cagri@cse.unr.edu} } \\ \\ \\
   \alignauthor{
   	\textbf{Thomas Kelly}\\
   	\affaddr{University of Nevada, Reno}\\
   	\affaddr{1664 North Virginia Street  Reno, NV 89557 USA}\\
   	\email{tjbk123@gmail.com}
   }\alignauthor{
-  	\textbf{Dr. Sergiu Dascalu}\\
+  	\textbf{Sergiu Dascalu}\\
   	\affaddr{University of Nevada, Reno}\\
   	\affaddr{1664 North Virginia Street  Reno, NV 89557 USA}\\
   	\email{dascalus@cse.unr.edu}
@@ -72,7 +72,7 @@
 \maketitle
 
 \begin{abstract}
-Traditional 3D painting software has relied on building a two-dimensional representation of three-dimensional space in which the user can rotate, pan, and zoom. PaintMobile3D takes a different approach. As smartphones become faster and more feature rich, we can take advantage of these improvements to do things that would previously be infeasible. Using a phone's camera, accelerometer, gyroscope, and/or compass, PaintMobile3D will be able to track the users’ movements as they move the phone around in the real world, allowing them to draw in 3D, based on the movements of the device in the real world. The user will be able to pick from different colors and can make multiple ``strokes'' using the phone to create more advanced drawings.
+Traditional 3D painting software has relied on building a two-dimensional representation of three-dimensional space in which the user can rotate, pan, and zoom. PaintMobile3D takes a different approach. As smartphones become faster and more feature rich, we can take advantage of these improvements to do things that would previously be infeasible. Using a phone's camera, accelerometer, gyroscope, and/or compass, PaintMobile3D can track the users’ movements as they move the phone around in the real world, allowing them to draw in 3D, based on the movements of the device in the real world. The user can pick from different colors and can make multiple ``strokes'' using the phone to create more advanced drawings.
 \end{abstract}
 
 \keywords{\plainkeywords}
@@ -89,15 +89,24 @@ Traditional 3D painting software has relied on building a two-dimensional repres
 \section{Introduction}
 % =============================================================================
 
-Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum. Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
+For some time, modeling 3D has been a difficult task due to the problems of the inherently 2D interaction model provided by
+computers. By adding a physical aspect to this, we make it intuitive for users to develop 3D content quickly and casually.
+Though there have been other solutions that allow 3D drawing, the ubiquity of smartphones makes the barrier to entry
+much lower. A user could casually decide to waste some time by sketching an object while waiting for a friend, or perhaps,
+when seized by a creative fit while out and about, make a quick sketch of an idea and export it to common 3D formats
+to be refined with traditional 3D software.
 
-Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum. Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
+At its core, PaintMobile3D is about taking the motion of a phone and translating it into 3D coordinates, used to draw a model.
+This is done using the various sensors on modern smartphones: accelerometers, compasses, and cameras. Newer smartphones
+also add gyroscopes. Even with all of this data, it is difficult to keep track of the phone in realtime due to the noisyness of the signal.
+Hol, et al. \cite{hol_robust_2007} created the approach used in this software to maintain the phone's location.
 
 \pagebreak
 
 \begin{figure}
 %\hspace*{-0.4\columnwidth}% displace figure
-\parbox{\columnwidth}{
+\parbox{1\columnwidth}{
+
   \centering
   \includegraphics[width=0.8\columnwidth]{onex.jpg}
   \caption{The main interface the user is presented with}
@@ -178,6 +187,7 @@ Since PaintMobile3D is an Android application, we naturally have made heavy use 
 \section{Potential Applications}
 
 PaintMobile3D is an application that is designed simply for user entertainment. However the inner-workings of the application, coupled with the mobility and popularity of smartphones can be applied to more productive means as well.
+
 
 \section{Acknowledgements}
 
