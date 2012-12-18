@@ -73,7 +73,7 @@
 \maketitle
 
 \begin{abstract}
-Traditional 3D painting software has relied on building a two-dimensional representation of three-dimensional space in which the user can rotate, pan, and zoom. PaintMobile3D takes a different approach. As smartphones become faster and more feature rich, we can take advantage of these improvements to do things that would previously be infeasible. Using a phone's camera, accelerometer, gyroscope, and/or compass, PaintMobile3D will be able to track the users’ movements as they move the phone around in the real world, allowing them to draw in 3D, based on the movements of the device in the real world. The user will be able to pick from different colors and can make multiple ``strokes'' using the phone to create more advanced drawings.
+Traditional 3D painting software has relied on building a two-dimensional representation of three-dimensional space in which the user can rotate, pan, and zoom. PaintMobile3D takes a different approach. As smartphones become faster and more feature rich, we can take advantage of these improvements to do things that would previously be infeasible. Using a phone's camera, accelerometer, gyroscope, and/or compass, PaintMobile3D can track the users’ movements as they move the phone around in the real world, allowing them to draw in 3D, based on the movements of the device in the real world. The user can pick from different colors and can make multiple ``strokes'' using the phone to create more advanced drawings.
 \end{abstract}
 
 \keywords{\plainkeywords}
@@ -89,16 +89,21 @@ Traditional 3D painting software has relied on building a two-dimensional repres
 % =============================================================================
 \section{Introduction}
 % =============================================================================
-This format is to be used for submissions that are published in the conference extended abstracts.  
-We wish to give this volume a consistent, high-quality appearance. 
-We therefore ask that authors follow some simple guidelines. 
-In essence, you should format your paper exactly like this document. 
-The easiest way to do this is simply to download a template from the conference website and replace the content with your own material.
+For some time, modeling 3D has been a difficult task due to the problems of the inherently 2D interaction model provided by
+computers. By adding a physical aspect to this, we make it intuitive for users to develop 3D content quickly and casually.
+Though there have been other solutions that allow 3D drawing, the ubiquity of smartphones makes the barrier to entry
+much lower. A user could casually decide to waste some time by sketching an object while waiting for a friend, or perhaps,
+when seized by a creative fit while out and about, make a quick sketch of an idea and export it to common 3D formats
+to be refined with traditional 3D software.
 
+At its core, PaintMobile3D is about taking the motion of a phone and translating it into 3D coordinates, used to draw a model.
+This is done using the various sensors on modern smartphones: accelerometers, compasses, and cameras. Newer smartphones
+also add gyroscopes. Even with all of this data, it is difficult to keep track of the phone in realtime due to the noisyness of the signal.
+Hol, et al. \cite{hol_robust_2007} created the approach used in this software to maintain the phone's location.
 
 \begin{figure}
-\hspace*{-0.4\columnwidth}% displace figure
-\parbox{1.4\columnwidth}{
+%\hspace*{-0.4\columnwidth}% displace figure
+\parbox{1\columnwidth}{
   \centering
   \includegraphics[width=\columnwidth]{sample.jpg}
   \caption{Insert a caption below each figure. Images can "float" around body text, like this example.}
@@ -177,7 +182,7 @@ As shown in \autoref{fig:sample}, the width of figures can be bigger than the wi
 % =============================================================================
 \section{References and Citations}
 % =============================================================================
-Use a numbered list of references at the end of the article, ordered alphabetically by first author, and referenced by numbers in brackets \cite{Anderson92,Klemmer02,Mather00,Zellweger01}
+Use a numbered list of references at the end of the article, ordered alphabetically by first author, and referenced by numbers in brackets %\cite{Anderson92,Klemmer02,Mather00,Zellweger01}
 For papers from conference proceedings, include the title of the paper and an abbreviated name of the conference (e.g., for Interact 2003 proceedings, use Proc. Interact 2003). 
 Do not include the location of the conference or the exact date; do include the page numbers if available. 
 See the examples of citations at the end of this document. 
@@ -221,7 +226,7 @@ Note that marginal notes must appear in the (left) outer margin, due to the temp
 We recommend that you produce a PDF version of your submission well before the final deadline. 
 Besides making sure that you are able to produce a PDF, you will need to check that (a) the length of the file remains within the submission category's page limit, (b) the PDF file size is 4 megabytes or less, and (c) the file can be read and printed using Adobe Acrobat Reader. 
 Test your PDF file by viewing or printing it with the same software we will use when we receive it, Adobe Acrobat Reader Version 7. 
-This is widely available at no cost from~\cite{Acrobat7}.  
+This is widely available at no cost from~% \cite{Acrobat7}.  
 Note that most reviewers will use a North American/European version of Acrobat reader, which cannot handle documents containing non-North American or non-European fonts (e.g. Asian fonts).  
 Please therefore do not use Asian fonts, and verify this by testing with a North American/European Acrobat reader (obtainable as above). Something as minor as including a space or punctuation character in a two-byte font can render a file unreadable.
 
@@ -230,7 +235,8 @@ We thank all DUX 2003 publications support and staff who wrote this document ori
 This template was based on Manas Tungare's \texttt{chi.cls}, and rewritten by Luis A. Leiva.
 
 \balance
-\bibliographystyle{acm-sigchi}
+
 \bibliography{references}
+\bibliographystyle{acm-sigchi}
 
 \end{document}
