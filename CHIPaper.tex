@@ -72,7 +72,7 @@
 \maketitle
 
 \begin{abstract}
-Traditional 3D painting software has relied on building a two-dimensional representation of three-dimensional space in which the user can rotate, pan, and zoom. PaintMobile3D takes a different approach. As smartphones become faster and more feature rich, we can take advantage of these improvements to do things that would previously be infeasible. Using a phone's camera, accelerometer, gyroscope, and/or compass, PaintMobile3D can track the users’ movements as they move the phone around in the real world, allowing them to draw in 3D, based on the movements of the device in the real world. The user can pick from different colors and can make multiple ``strokes'' using the phone to create more advanced drawings.
+Traditional 3D painting software has relied on building a two-dimensional representation of three-dimensional space in which the user can rotate, pan, and zoom. PaintMobile3D takes a different approach. As smartphones become faster and more feature-rich, we can take advantage of these improvements to do things that would previously be infeasible. Using a phone's camera, accelerometer, gyroscope, and/or compass, PaintMobile3D can track users’ movements as they move the phone around in the real world, allowing them to draw in 3D, based on the motion of the device in the real world. The user can pick from different colors and can make multiple ``strokes'' using the phone to create more advanced drawings.
 \end{abstract}
 
 \keywords{\plainkeywords}
@@ -92,13 +92,13 @@ Traditional 3D painting software has relied on building a two-dimensional repres
 For some time, modeling 3D has been a difficult task due to the problems of the inherently 2D interaction model provided by
 computers. By adding a physical aspect to this, we make it intuitive for users to develop 3D content quickly and casually.
 Though there have been other solutions that allow 3D drawing, the ubiquity of smartphones makes the barrier to entry
-much lower. A user could casually decide to waste some time by sketching an object while waiting for a friend, or perhaps,
-when seized by a creative fit while out and about, make a quick sketch of an idea and export it to common 3D formats
+much lower. A user can casually decide to waste some time by sketching an object while waiting for a friend, or perhaps,
+when seized by a creative fit while out and about, make a quick sketch of an idea and export it to a common 3D format
 to be refined with traditional 3D software.
 
 At its core, PaintMobile3D is about taking the motion of a phone and translating it into 3D coordinates, used to draw a model.
 This is done using the various sensors on modern smartphones: accelerometers, compasses, and cameras. Newer smartphones
-also add gyroscopes. Even with all of this data, it is difficult to keep track of the phone in realtime due to the noisyness of the signal.
+also add gyroscopes. Even with all of this data, it is difficult to keep track of the phone in realtime due to the noisiness of the signal.
 Hol, et al. \cite{hol_robust_2007} created the approach used in this software to maintain the phone's location.
 
 \pagebreak
@@ -124,7 +124,7 @@ All rights reserved.
 
 \section{Intended Users \& Usability Goals}
 
-PaintMobile3D is an end-user product that will largely be used for the users enjoyment. The application is currently built exclusively for the Android platform, as such the intended users of the application will be Android smartphone users with a device running Android 2.3.x (Gingerbread) or newer. The application currently does not have a specific problem domain outside of entertainment, and as such can be used by any user without any prior training. PaintMobile3D requires no configuration for most users, minimal user interface elements (two options on the ActionBar), and a simple command structure (hold screen to draw, release to stop drawing). Consequently, PaintMobile3D is a very simple and easy to use application. Our main goals when creating PaintMobile3D are the following:
+PaintMobile3D is an end-user product that will largely be used for enjoyment. The application is currently built exclusively for the Android platform, as such the intended users of the application will be Android smartphone users with a device running Android 2.3.x (Gingerbread) or newer. The application currently does not have a specific problem domain outside of entertainment, and as such can be used by any user without any prior training. PaintMobile3D requires no configuration for most users, minimal user interface elements (two options on the ActionBar), and a simple command structure (hold screen to draw, release to stop drawing). Consequently, PaintMobile3D is a very simple and easy to use application. Our main goals when creating PaintMobile3D are the following:
 
 \begin{itemize}
 \item
@@ -137,7 +137,7 @@ Allow the user to draw by moving their phone through space
 
 \section{Main Functionality}
 
-The core functionality of PaintMobile3D revolves around the ability to paint in three-dimensional space. This functionality is provided by combining the sensor data of the camera of the device as well as the accelerometer and gyroscope (if available), which are combined using an algorithm to provide device localization (the location of the phone in a three-dimensional space). We use these measurements to create points in a virtual coordinate system that can then be used to draw points, lines, or other geometric shapes. Once the user has drawn his or her object in the virtual 3D environment, they are free view the drawing from different angles and perspectives by orbiting, panning, or zooming the drawing. These operations are performed by making intuitive gestures on the screen of the device, such as a swipe to orbit or pinch to zoom.
+The core functionality of PaintMobile3D revolves around the ability to paint in three-dimensional space. This functionality is provided by combining the sensor data of the camera of the device, as well as the accelerometer and gyroscope (if available), which are combined using an algorithm to provide device localization, that is, the determination of the location of the phone in a three-dimensional space. We use these measurements to create points in a virtual coordinate system that can then be used to draw points, lines, or other geometric shapes. Once the user has drawn his or her object in the virtual 3D environment, they are free to view the drawing from different angles and perspectives by orbiting, panning, or zooming the drawing. These operations are performed by making intuitive gestures on the screen of the device, such as a swipe to orbit or a pinch to zoom.
 
 \section{Related Systems \& Novelty}
 
@@ -182,7 +182,7 @@ Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor 
 
 \section{Technology \& Implementation}
 
-Since PaintMobile3D is an Android application, we naturally have made heavy use of the Android API. Sensor data is aquired using a publisher-subsciber system that is made available by the Android operating system. In order to draw the points onto the display for the user to see, we have made use of the OpenGL ES library that is also provided by the Android API. While the accelerometer and gyroscope provide directly applicable information straight from the sensor, the data from the camera requires additional manipulation in order to make it useful. For this, are using the OpenCV implementation for Android, called OpenCV4Android to provide with computer vision functionality such as feature extraction and motion tracking. After this data has been processed, it can then be used in our localization algorithms. Some of the calculations needed to perform localization for our application are computationally taxing. Since the application is designed to run on a mobile device that has limited battery power, we need to make these computations as efficient as possible. To do this, we are using the Android NDK (Native Development Kit) to provide us with direct access to the CPU via a C interface (as opposed to the Dalvic Virtual Machine used by Java components of the application).
+Since PaintMobile3D is an Android application, we naturally have made heavy use of the Android API. Sensor data is acquired using from callbacks that are made available by the Android operating system. In order to draw the points onto the display for the user to see, we have made use of the OpenGL ES library that is also provided by the Android API. While the accelerometer and gyroscope provide directly applicable information straight from the sensor, the data from the camera requires additional manipulation in order to make it useful. For this, we are using the OpenCV implementation for Android, called OpenCV4Android. to provide computer vision functionality, such as feature extraction and motion tracking. After this data has been processed, it can then be used by our localization algorithms. Some of the calculations needed to perform localization for our application are computationally taxing. Since the application is designed to run on a mobile device that has limited battery power, we need to make these computations as efficient as possible. To do this, we are using the Android NDK (Native Development Kit) to provide us with direct access to the CPU using native code, instead of the managed environment provided by Android's Dalvik Virtual Machine.
 
 \section{Potential Applications}
 
